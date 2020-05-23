@@ -4,12 +4,36 @@
     <title>MercedesBlog</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
+  <div class="card mt-1">
+    <div class="container">
+    <div class="nav">
+      <a class="navbar-brand">
+        <%= image_tag "/assets/mblogo.svg", height: '30', width: '30'%>
+        Mercedes-Benz Blog
+      </a>
+        <ul class="nav nav-tabs card-header-tabs">
+            <li class="nav-item ml-2 mr-2">
+              <%= link_to 'All Article', posts_path, class:'btn btn-primary'%>
+            </li>
+            <li class="nav-item ml-2 mr-2">
+              <%= link_to 'New Article', new_post_path, class:'btn btn-primary' %>
+            </li>
+        </ul>
+    </div>
+    </div>
+
+    <div class="container mt-3 mb-4">
     <%= yield %>
-  </body>
+    </div>
+
+  </div>
+
+
+<div class="card-footer fixed-bottom justify-content-center d-flex">
+  This site was created by Vetalic_V |KDANIELDK|
+</div>
 </html>
