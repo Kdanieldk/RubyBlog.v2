@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
-
 ruby '2.6.6'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -28,5 +27,19 @@ group :test do
   gem 'capybara', '>= 2.15'
   gem 'selenium-webdriver'
   gem 'webdrivers'
+  gem "toml-rb"
+  gem "heroku_hatchet"
+  gem "rspec-core"
+  gem "rspec-expectations"
+  gem "excon"
+  gem "parallel_tests"
+  gem 'rspec-retry'
+  gem "netrc"
+  gem "git", github: "hone/ruby-git", branch: "master"
+  gem 'json', '~> 2.0.2'
+  gem 'ci-queue', github: 'shopify/ci-queue', branch: 'rspec-log-order'
+  gem 'redis'
 end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+
