@@ -36,7 +36,7 @@ $ ->
   deleteFile = (n) ->
     $.ajax
       type: 'DELETE'
-      url: '/admin/pictures/' + n.attachment.attributes.values.picture_id
+      url: '/assets/pictures/' + n.attachment.attributes.values.picture_id
       cache: false
       contentType: false
       processData: false
