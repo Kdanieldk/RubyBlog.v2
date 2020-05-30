@@ -24,11 +24,14 @@ class PostsController<ApplicationController
   end
 
   def edit
+    @post = Post.find(params[:id])
   end
 
   def update
+    @post = Post.find(params[:id])
+
     if @post.update_attributes(post_params)
-      redirect_to @post, succes: 'Successfuly updated '
+      redirect_to @post, success: 'Successfuly updated '
     else
       render :edit, danger: 'Article hasn`t been updated'
     end

@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   resources :posts
   resources :image, only: [:create, :destroy]
   resources :tags, only: [:show]
+
 end
