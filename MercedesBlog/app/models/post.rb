@@ -1,8 +1,8 @@
 class Post < ApplicationRecord
 
   mount_uploader :image, ImageUploader
-
-  has_many :taggings
+  validates :title, :summary, :body, presence: true
+  has_many :taggings, :dependent => :destroy
   has_many :tags, through: :taggings
 
   def all_tags
