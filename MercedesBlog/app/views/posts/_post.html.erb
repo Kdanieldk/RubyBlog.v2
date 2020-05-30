@@ -1,5 +1,5 @@
 <article class="post">
-  <section class="post-head mt-2 mb-2">
+  <section class="post-head mt-2 mb-2 text-justify">
     <h2 class="card-title"><%= link_to post.title, post_path(post) %></h2>
     <small> <%= post.created_at.to_date.strftime("%d %B, %Y")%></small>
     |
@@ -8,6 +8,10 @@
   </section>
 
   <section class="post-summary">
+<%= post.summary %>
+  </section>
 
+  <section class="footer-summary">
+    <%= raw post.tags.map(&:name).map { |t| link_to t, tag_path(t), class:'badge badge-pill badge-primary'}.join(' ')%>
   </section>
 </article>

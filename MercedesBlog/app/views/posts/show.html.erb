@@ -7,7 +7,7 @@
     <%= link_to 'Delete', post_path(@post), method: :delete, data: {confirm: 'Are you sure?'} %>
   </section>
 
-  <section class="post-body mt-3 mb-2 pt-1">
+  <section class="post-body mt-3 mb-2 pt-1 text-justify">
     <p><%= @post.body.html_safe %></p>
   </section>
 </article>
